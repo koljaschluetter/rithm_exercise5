@@ -1,4 +1,7 @@
 body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     background-color: #ceebff;
 }
 
@@ -7,7 +10,6 @@ body {
     display: block;
     text-align: center;
     padding-top: 20px;
-    background-color: #ceebff;
 }
 
 .col {
@@ -53,7 +55,6 @@ body {
 }
 
 .pair {
-
     border-color: #42f445;
 }
 
@@ -74,8 +75,22 @@ body {
 }
 
 .startgame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    height: 100vh;
     background-color: #ceebff;
-    margin: auto;
+    transition: all 1s ease;
+}
+
+.title-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #ceebff;
+    transform: translate(-50%, -50%);
 }
 
 .headline {
@@ -92,6 +107,8 @@ body {
 }
 
 .perspective-container {
+    position: relative;
+    text-align: center;
     perspective: 150px;
 }
 
@@ -120,14 +137,8 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.startgame {
-    padding-bottom: 60px;
-    margin: 0;
-    transition: all 1s ease;
-}
-
 .startgame.duringgame {
-    margin-top: -500px;
+    transform: translateY(-100%);
 }
 
 .count {
